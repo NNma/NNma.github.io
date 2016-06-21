@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<style type="text/css">
+div{
+	width:10px;
+	height: 10px;
+	background: pink;
+	position: absolute;
+}
+</style>
+<body>
+<script type="text/javascript">
+	var divs = document.getElementsByTagName('div');
+	document.onmousemove = function(ev){
+		var div = document.createElement('div');
+		div.style.left = ev.pageX + 'px';
+		div.style.top = ev.pageY + 'px';
+		if(divs.length >= 10){
+			document.body.removeChild(divs[0]);
+		}
+		document.body.appendChild(div);
+	}
+</script>
+</body>
+</html>
