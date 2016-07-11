@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>网易云音乐</title>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/DD_belatedPNG_0.0.8a.js"></script>
+		<script>
+			DD_belatedPNG.fix('span,a');
+		</script>
+		<style>
+			body,h1,h2,h3,h4,input,p,ul,ol {
+				margin: 0;
+				padding: 0;
+				font-size: 12px;
+				font-family: "宋体";
+			}
+			li {
+				list-style: none;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			img {
+				vertical-align: top;
+				border: none;
+			}
+			
+			.clearFix {
+				zoom: 1;
+			}
+			
+			.clearFix:after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			
+			span {
+				overflow: hidden;
+			}
+			/*头部开始*/
+			
+			.wrap {
+				height: 69px;
+				background: url(img/headerBg.png) repeat-x;
+				border: 1px solid #030303;
+				border-left: none;
+				border-right: none;
+			}
+			
+			#header {
+				margin: 0 auto;
+				width: 983px;
+				padding-left: 1px;
+			}
+			
+			#header h1 {
+				float: left;
+				width: 176px;
+				margin: 22px 0 18px 0;
+				overflow: hidden;
+			}
+			
+			#header nav {
+				width: 391px;
+				float: left;
+				position: relative;
+			}
+			
+			#header nav a {
+				color: #cccccc;
+				float: left;
+				font-size: 14px;
+				font-family: "微软雅黑";
+				margin-right: -2px;
+			}
+			
+			#header nav strong {
+				font-weight: normal;
+				padding: 0 22px 0 18px;
+				line-height: 12px;
+				float: left;
+				border-left: 1px solid #414141;
+				border-right: 1px solid #030303;
+			}
+			
+			#header nav .doorR {
+				float: left;
+				padding: 30px 0 25px;
+			}
+			
+			#header nav .doorL {
+				float: left;
+			}
+			
+			#header nav a:hover {
+				background: url(img/header_hover.png) repeat-x;
+				margin-right: -2px;
+			}
+			
+			#header a:hover .doorL {
+				background: url(img/doorL.png) no-repeat;
+			}
+			
+			#header a:hover .doorR {
+				background: url(img/doorL.png) no-repeat right 0;
+			}
+			
+			#header a:hover strong {
+				background: none;
+			}
+			
+			#jiao {
+				float: left;
+				width: 14px;
+				height: 9px;
+				background: url(img/sprite.png) no-repeat -31px -20px;
+				position: absolute;
+				left: 40px;
+				top: 62px;
+			}
+			
+			#header #hot {
+				width: 26px;
+				height: 20px;
+				background: url(img/sprite.png) no-repeat -31px 0;
+				position: absolute;
+				left: 350px;
+				top: 22px;
+			}
+			
+			#first {
+				border-left: #2c2c2c;
+				padding-left: 19px;
+			}
+			/*#header #first_a{background: url(img/header_visited.png) no-repeat;}*/
+			
+			#header #last {
+				border-right: none;
+				padding-right: 37px;
+			}
+			
+			#header form {
+				width: 273px;
+				float: right;
+				height: 31px;
+				padding: 20px 0 18px;
+			}
+			
+			form #form_left {
+				width: 210px;
+				float: left;
+				position: relative;
+			}
+			
+			form #form_left span {
+				width: 12px;
+				height: 12px;
+				background: url(img/sprite.png) no-repeat -58px 0;
+				position: absolute;
+				left: 13px;
+				top: 9px;
+			}
+			
+			form input {
+				width: 169px;
+				height: 12px;
+				border: none;
+				outline: none;
+				background: url(img/inputBg.png) repeat-x;
+				border-radius: 14px;
+				color: #9b9b9b;
+				padding: 11px 8px 6px 33px;
+				font-family: Arial;
+			}
+			
+			form #form_right {
+				width: 25px;
+				float: left;
+				padding: 7px 23px 0 15px;
+				position: relative;
+			}
+			
+			form #form_right #san {
+				width: 12px;
+				height: 7px;
+				background: url(img/sprite.png) no-repeat -58px -12px;
+				position: absolute;
+				left: 49px;
+				top: 14px;
+			}
+			
+			#form_right a {
+				line-height: 24px;
+				color: #787878;
+			}
+			
+			#form_right a:hover {
+				text-decoration: underline;
+			}
+			
+			#navTop {
+				background: url(img/navBg.png) repeat-x;
+				height: 34px;
+				overflow: hidden;
+			}
+			
+			#navTop div {
+				width: 806px;
+				height: 34px;
+				margin: 0 auto;
+				padding-left: 178px;
+			}
+			
+			#navTop a {
+				font-family: "微软雅黑";
+				float: left;
+				color: #ffffff;
+				padding: 5px 13px 5px 14px;
+				border-radius: 10px;
+				margin: 6px 18px 6px 17px;
+				line-height: 12px;
+			}
+			
+			#navTop a:hover {
+				background: url(img/nav_aBg.png) repeat-x;
+				border: 1px solid #cb0e0e;
+				padding: 4px 12px 4px 13px;
+			}
+			/*bander开始*/
+			
+			#banner {
+				width: 100%;
+				height: 336px;
+				background: #f0ede6;
+			}
+			
+			#banner .banner_wrap {
+				width: 983px;
+				margin: 0 auto;
+			}
+			
+			#banner .a {
+				width: 24px;
+				height: 45px;
+				position: absolute;
+				left: 131px;
+				top: 250px;
+			}
+			
+			#banner #bannerL {
+				width: 18px;
+				height: 38px;
+				background: url(img/sprite.png) no-repeat -46px -54px;
+				position: absolute;
+				left: 133px;
+				top: 254px;
+			}
+			
+			#banner #bannerR {
+				width: 18px;
+				height: 38px;
+				background: url(img/sprite.png) no-repeat -66px -54px;
+				position: absolute;
+				right: 131px;
+				top: 254px;
+			}
+			
+			#banner img {
+				float: left;
+			}
+			
+			#banner .banner_left {
+				position: relative;
+				/*width:730px;height:336px;*/
+			}
+			
+			#banner ul {
+				position: absolute;
+				left: 284px;
+				bottom: -323px;
+				width: 167px;
+				height: 6px;
+			}
+			
+			#banner ul li {
+				width: 6px;
+				height: 6px;
+				margin: 0 8px 0 9px;
+				float: left;
+			}
+			
+			#banner ul li:hover {
+				background: url(img/sprite.png) no-repeat -40px -31px; 
+			}
+			#banner .banner_right {
+				height: 336px;
+				width: 252px;
+				float: left;
+				box-shadow: 0 0 5px 2px #252524;
+				position: relative;
+			}
+			
+			.banner_right div {
+				height: 54px;
+				width: 213px;
+				background: url(img/banner_rightBg.png) repeat-x;
+				border: 1px solid #1f6ec7;
+				border-radius: 3px;
+				position: absolute;
+				left: 18px;
+				bottom: 67px;
+			}
+			
+			.banner_right div:hover {
+				background: #478bf9;
+			}
+			
+			.banner_right div #xiazai {
+				width: 30px;
+				height: 30px;
+				background: url(img/sprite.png) no-repeat;
+				position: absolute;
+				left: 33px;
+				top: 14px;
+			}
+			
+			.banner_right div a {
+				font-family: "微软雅黑";
+				font-size: 24px;
+				line-height: 22px;
+				color: #fff;
+				padding: 16px 0 14px 70px;
+				float: left;
+				background: ;
+			}
+			
+			.banner_right p {
+				color: #8d8d8d;
+				font-family: "微软雅黑";
+				position: absolute;
+				left: 15px;
+				bottom: 40px;
+			}
+			/*内容开始*/
+			
+			#content {
+				background: #f5f5f5;
+				border-bottom: 1px solid #d5d5d5;
+			}
+			
+			#content .content_wrap {
+				margin: 0 auto;
+				width: 982px;
+				height: 1390px;
+				background: #fff;
+			}
+			/*内容左边*/
+			
+			#left {
+				padding: 0 20px 0;
+				border-left: 1px solid #d5d5d5;
+				border-right: 1px solid #d5d5d5;
+				width: 689px;
+				float: left;
+				overflow: hidden;
+			}
+			
+			#left ul a:hover {
+				text-decoration: underline;
+			}
+			/*left公有部分*/
+			
+			.left_header {
+				height: 53px;
+				border-bottom: 2px solid #c10d0c;
+			}
+			
+			.left_header h2 {
+				float: left;
+				font-size: 20px;
+				line-height: 37px;
+				padding: 17px 0 0 34px;
+				font-weight: normal;
+				position: relative;
+			}
+			
+			.left_header h2 .red {
+				width: 14px;
+				height: 14px;
+				background: url(img/sprite.png) no-repeat 0 -31px;
+				position: absolute;
+				left: 10px;
+				top: 28px;
+			}
+			
+			.left_header h2 a {
+				color: #333;
+				font-family: "微软雅黑";
+			}
+			
+			.left_header .more {
+				width: ;
+				float: right;
+				padding: 23px 25px 0 0;
+				line-height: 29px;
+				position: relative;
+			}
+			
+			.left_header .more .jiantou {
+				width: 8px;
+				height: 6px;
+				background: url(img/sprite.png) no-repeat -46px -21px;
+				position: absolute;
+				right: 12px;
+				top: 36px;
+			}
+			
+			.left_header .more a {
+				color: #666;
+				font-family: "微软雅黑";
+			}
+			
+			.left_header .more a:hover {
+				text-decoration: underline;
+			}
+			/*左边第一部分*/
+			
+			.left_header nav {
+				width: ;
+				float: left;
+				color: #e0cce0;
+				padding: 19px 0 0 9px;
+			}
+			
+			.left_header nav a {
+				color: #666;
+				padding: 0 11px;
+				line-height: 34px;
+			}
+			
+			.left_header nav a:hover {
+				text-decoration: underline;
+			}
+			
+			#left1 ul {
+				width: 728px;
+				height: 468px;
+			}
+			
+			#left1 ul li {
+				padding: 20px 42px 0 0;
+				float: left;
+				height: 214px;
+				width: 140px;
+			}
+			
+			#left1 ul li .img {
+				height: 140px;
+				width: 140px;
+				position: relative;
+			}
+			
+			#left1 ul li .img .headset {
+				width: 14px;
+				height: 10px;
+				background: url(img/sprite.png) no-repeat -55px -20px;
+				position: absolute;
+				left: 10px;
+				bottom: 8px;
+			}
+			
+			#left1 ul li .img .play {
+				width: 16px;
+				height: 16px;
+				background: url(img/sprite.png) no-repeat 0 -46px;
+				position: absolute;
+				right: 10px;
+				bottom: 5px;
+			}
+			
+			#left1 ul li .img .play:hover {
+				background: url(img/sprite.png) no-repeat -17px -46px;
+			}
+			
+			#left1 ul li img {
+				height: 140px;
+				width: 140px;
+			}
+			
+			#left1 ul li .mask {
+				background: #232222;
+				filter: alpha(opacity=40);
+				opacity: .4;
+				height: 25px;
+				width: 100%;
+				border-top: 1px solid #000;
+				border-bottom: 1px solid #000;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+			
+			#left1 ul li .text {
+				line-height: 22px;
+				text-indent: 29px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				color: #cccccc;
+			}
+			
+			#left1 ul li strong {
+				font-weight: normal;
+				width: 140px;
+				padding-top: 9px;
+				display: block;
+				position: relative;
+			}
+			
+			#left1 ul li strong a {
+				color: #000;
+				line-height: 19px;
+			}
+			
+			#left1 ul li strong .jiemu {
+				text-indent: 42px;
+				display: block;
+			}
+			
+			#left1 ul li strong .diantai {
+				width: 35px;
+				height: 15px;
+				background: url(img/sprite.png) no-repeat -71px 0;
+				position: absolute;
+				left: 0;
+				top: 10px;
+			}
+			/*左边第二部分*/
+			
+			#left2 .ul_wrap {
+				margin: 20px 0 17px;
+				border: 1px solid #d3d3d3;
+				padding: 1px;
+				background: #fff;
+				position: relative;
+			}
+			
+			#left2 ul {
+				background: #f5f5f5;
+				width: 645px;
+				height: 144px;
+				padding: 28px 23px 12px 17px;
+				position: relative;
+			}
+			
+			#left2L {
+				width: 7px;
+				height: 13px;
+				background: url(img/sprite.png) no-repeat -23px -31px;
+				position: absolute;
+				left: 9px;
+				top: 72px;
+				cursor: pointer;
+			}
+			
+			#left2R {
+				width: 7px;
+				height: 13px;
+				background: url(img/sprite.png) no-repeat -31px -31px;
+				position: absolute;
+				right: 11px;
+				top: 72px;
+				cursor: pointer;
+			}
+			
+			#left2 ul li {
+				height: 144px;
+				float: left;
+				width: 100px;
+				padding: 0 19px 0 10px;
+				position: relative;
+			}
+			
+			#left2 ul li .CD {
+				width: 19px;
+				height: 100px;
+				background: url(img/sprite.png) no-repeat -109px 0;
+				position: absolute;
+				left: 110px;
+				top: 0;
+			}
+			
+			#left2 ul li img {}
+			
+			#left2 ul li strong {
+				font-weight: normal;
+				display: block;
+				padding-top: 8px;
+			}
+			
+			#left2 ul li strong a {
+				color: #000;
+				line-height: 18px;
+			}
+			
+			#left2 ul li p a {
+				color: #666666;
+				line-height: 18px;
+			}
+			
+			#left2 ul li a:hover {
+				text-decoration: underline;
+			}
+			/*左边第三部分*/
+			
+			#left3 ul {
+				margin: 19px 0 40px;
+				height: 471px;
+				border-top: 1px solid #c8c8c8;
+				border-bottom: 1px solid #c8c8c8;
+				width: 689px;
+			}
+			
+			#left3 ul .li_wrap {
+				padding: 1px;
+				background: #fff;
+				border-left: 1px solid #b9b9b9;
+				width: 226px;
+				float: left;
+			}
+			
+			#left3 ul #li_1px {
+				width: 227px;
+			}
+			
+			#left3 ul #li_right {
+				border-right: 1px solid #b9b9b9;
+			}
+			
+			#left3 .li_wrap div {
+				background: #f4f4f4;
+			}
+			
+			#left3 .li_wrap img {
+				margin: 19px 10px 20px 18px;
+				width: 80px;
+				float: left;
+			}
+			
+			#left3 .li_wrap h3 {
+				width: 118px;
+				float: left;
+				padding: 19px 0 20px 0;
+				height: 80px;
+				position: relative;
+			}
+			
+			#left3 .li_wrap .play1 {
+				width: 22px;
+				height: 22px;
+				background: url(img/sprite.png) no-repeat 0 -63px;
+				position: absolute;
+				left: 0;
+				top: 54px;
+			}
+			
+			#left3 .li_wrap .play1:hover {
+				background: url(img/sprite.png) no-repeat -23px -63px;
+			}
+			
+			#left3 .li_wrap .collect1 {
+				width: 20px;
+				height: 19px;
+				background: url(img/sprite.png) no-repeat 0 -86px;
+				position: absolute;
+				left: 32px;
+				top: 56px;
+			}
+			
+			#left3 .li_wrap .collect1:hover {
+				background: url(img/sprite.png) no-repeat -21px -86px;
+			}
+			
+			#left3 .li_wrap a {
+				color: #333;
+				line-height: 32px;
+			}
+			
+			#left3 ol .ol_li {
+				height: 32px;
+				background: #f4f4f4;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				position: relative;
+				vertical-align: top;
+			}
+			
+			#left3 ol span {
+				line-height: 32px;
+				font-size: 18px;
+				color: #666;
+				padding-left: 27px;
+				float: left;
+			}
+			
+			#left3 .ol_li .one {
+				width: 22px;
+				height: 17px;
+				background: url(img/sprite.png) no-repeat 0 -106px;
+				position: absolute;
+				right: 58px;
+				top: 7px;
+				float: left;
+				padding: 0;
+			}
+			#left3 .ol_li .one:hover {
+				background: url(img/sprite.png) no-repeat 0 -124px;
+			}
+			
+			#left3 .ol_li .two {
+				width: 22px;
+				height: 17px;
+				background: url(img/sprite.png) no-repeat -22px -106px;
+				position: absolute;
+				right: 36px;
+				top: 7px;
+				float: left;
+				padding: 0;
+			}
+			#left3 .ol_li .two:hover {
+				background: url(img/sprite.png) no-repeat -22px -124px;
+			}
+			
+			#left3 .ol_li .three {
+				width: 22px;
+				height: 17px;
+				background: url(img/sprite.png) no-repeat -44px -106px;
+				position: absolute;
+				right: 14px;
+				top: 7px;
+				float: left;
+				padding: 0;
+			}
+			#left3 .ol_li .three:hover {
+				background: url(img/sprite.png) no-repeat -44px -124px;
+			}
+			
+			#left3 ol .li_color {
+				background: #e8e8e8;
+			}
+			
+			#left3 .ol_li a {
+				line-height: 30px;
+				padding-top: 2px;
+				color: #000;
+				padding-left: 13px;
+				width: 96px;
+				float: left;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				font-family: Arial;
+			}
+			
+			
+			#left3 ol .span_color {
+				color: #c10d0c;
+			}
+			
+			#left3 ol .ol_liLast {
+				height: 30px;
+				position: relative;
+			}
+			
+			#left3 .ol_liLast .spanLast {
+				
+				position: absolute;
+				right: 28px;
+				bottom: 11px;
+			}
+			
+			#left3 .ol_li .all {
+				float: right;
+				padding: 4px 28px 0 0;
+				line-height: 26px;
+				width: 55px;
+				height: 26px;
+			}
+			/*内容右边*/
+			
+			#right {
+				width: 250px;
+				float: left;
+				border-right: 1px solid #d3d3d3;
+				height: 1390px;
+			}
+			
+			#right #right1_wrap {
+				background: #fff;
+				padding: 1px;
+				border-bottom: 1px solid #b1b1b1;
+			}
+			
+			#right #right1 {
+				height: 121px;
+				width: 248px;
+				background: url(img/right1Bg.png) repeat-x;
+			}
+			
+			#right #right1 p {
+				line-height: 22px;
+				padding: 15px 23px 16px 21px;
+				color: #666;
+				font-family: "微软雅黑";
+			}
+			
+			#right #right1 a {
+				color: #fff;
+				background: url(img/landBg.png) repeat-x;
+				width: 98px;
+				display: block;
+				line-height: 26px;
+				padding-top: 2px;
+				border-radius: 3px;
+				margin-left: 74px;
+				text-align: center;
+				border: 1px solid #ba0c12;
+			}
+			
+			#right #right1 a:hover {
+				background: #ed2830;
+			}
+			
+			#right #right2 {
+				padding: 0 20px;
+			}
+			
+			#right2 li .headerR {
+				border-bottom: 1px solid #ccc;
+				padding-top: 12px;
+			}
+			
+			#right2 li .headerR h3 {
+				float: left;
+				color: #333;
+				line-height: 28px;
+			}
+			
+			#right2 li .headerR a {
+				color: #666666;
+				float: right;
+				line-height: 28px;
+				padding-right: 10px;
+				position: relative;
+			}
+			
+			#right2 li .headerR a .check {
+				width: 7px;
+				height: 5px;
+				background: url(img/sprite.png) no-repeat -15px -31px;
+				position: absolute;
+				right: 0;
+				bottom: 12px;
+			}
+			
+			#right2 #ul1 {
+				padding-top: 20px;
+			}
+			
+			#right2 #ul1 li {
+				padding-bottom: 14px;
+				height: 62px;
+				width: 210px;
+			}
+			
+			#right2 #ul1 li img {
+				width: 62px;
+				height: 62px;
+				float: left;
+			}
+			
+			#right2 #ul1 li a {
+				float: left;
+				width: 133px;
+				height: 60px;
+				border: 1px solid #e9e9e9;
+				border-left: none;
+				background: #fafafa;
+				padding-left: 14px;
+			}
+			
+			#right2 #ul1 li a:hover {
+				background: #f4f4f4;
+			}
+			
+			#right2 #ul1 li a strong {
+				color: #333333;
+				line-height: 36px;
+			}
+			
+			#right2 #ul1 li a p {
+				color: #666;
+				line-height: 22px;
+			}
+			
+			#right2 #buttom {
+				display: block;
+				width: 208px;
+				height: 26px;
+				background: url(img/right2Bg.png) repeat-x;
+				line-height: 26px;
+				padding-top: 2px;
+				border: 1px solid #c4c4c4;
+				border-radius: 3px;
+				text-align: center;
+				color: #333333;
+				margin-bottom: 14px;
+			}
+			
+			#right2 #buttom:hover {
+				background: #fff;
+			}
+			
+			#right2 #ul2 {
+				padding-top: 20px;
+			}
+			
+			#right2 #ul2 li {
+				padding-bottom: 10px;
+				width: 210px;
+				height: 40px;
+			}
+			
+			#right2 #ul2 li img {
+				float: left;
+				width: 40px;
+			}
+			
+			#right2 #ul2 li div {
+				float: left;
+				width: 160px;
+				padding-left: 10px;
+				position: relative;
+			}
+			
+			#right2 #ul2 li div .V {
+				width: 11px;
+				height: 12px;
+				background: url(img/sprite.png) no-repeat -34px -50px;
+				position: absolute;
+				left: 37px;
+				top: 6px;
+			}
+			
+			#right2 #ul2 li div a {
+				line-height: 24px;
+				color: #000;
+			}
+			
+			#right2 #ul2 li div p {
+				color: #666;
+				width: ;
+				line-height: 18px;
+			}
+/*底部开始*/
+			
+			footer {
+				background: #f9f9f9;
+				font-family: "微软雅黑"
+			}
+			
+			footer #footer_wrap {
+				padding-top: 30px;
+				margin: 0 auto;
+				width: 982px;
+				height: 95px;
+			}
+			
+			footer a {
+				color: #9b9b9b;
+				font-family: Arial;
+			}
+			
+			#footerL {
+				width: 247px;
+				float: left;
+				line-height: 22px;
+				padding-left: 76px;
+				position: relative;
+			}
+			
+			#footerL #foot {
+				width: 37px;
+				height: 37px;
+				background: url(img/sprite.png) no-repeat -71px -16px;
+				position: absolute;
+				left: 27px;
+				top: 3px;
+			}
+			
+			#footerL h4 {
+				color: #666;
+				font-weight: normal;
+			}
+			
+			#footerC {
+				width: 388px;
+				float: left;
+				line-height: 22px;
+				color: #9b9b9b;
+			}
+			
+			#footerC a:hover {
+				text-decoration: underline;
+			}
+			
+			#footerR {
+				width: 77px;
+				float: right;
+				line-height: 44px;
+				padding-left: 22px;
+				position: relative;
+			}
+			
+			#footerR a:hover {
+				text-decoration: underline;
+			}
+			
+			#footerR #opinion {
+				width: 19px;
+				height: 16px;
+				background: url(img/sprite.png) no-repeat -51px -31px;
+				position: absolute;
+				left: 0;
+				top: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 头部开始 -->
+		<section>
+			<div class="wrap clearFix">
+				<header id="header" class="clearFix">
+					<h1>
+					<a href="#">
+					<img src="img/logo.png"/></a>
+				</h1>
+					<nav class="clearFix">
+						<a href="#" id="first_a" style="background: url(img/header_visited.png) no-repeat;">
+							<span class="doorL">
+							<span class="doorR">
+								<strong id="first">发现音乐</strong>
+							</span>
+							</span>
+							<span id="jiao"></span>
+						</a>
+						<a href="#">
+							<span class="doorL">
+							<span class="doorR">
+								<strong style="border-left:none;">我的音乐</strong>
+							</span>
+							</span>
+						</a>
+						<a href="#">
+							<span class="doorL">
+							<span class="doorR">
+								<strong>朋友</strong>
+							</span>
+							</span>
+						</a>
+						<a href="#">
+							<span class="doorL">
+							<span class="doorR">
+								<strong id="last">下载客户端</strong>
+							</span>
+							</span>
+							<span id="hot"></span>
+						</a>
+					</nav>
+					<form>
+						<div id="form_left">
+							<span></span>
+							<input type="text" value="单曲/歌手/专辑/歌单/用户" class="text" />
+						</div>
+						<div id="form_right">
+							<span id="san"></span>
+							<a href="#">登录</a>
+						</div>
+					</form>
+				</header>
+			</div>
+			<nav id="navTop" class="clearFix">
+				<div>
+					<a href="#" style="background:url(img/nav_aBg.png) repeat-x;border:1px solid #cb0e0e;padding:4px 12px 4px 13px;">推荐</a>
+					<a href="#">排行榜</a>
+					<a href="#">歌单</a>
+					<a href="#">主播电台</a>
+					<a href="#">歌手</a>
+					<a href="#">新碟上架</a>
+				</div>
+			</nav>
+		</section>
+		<!-- bander开始 -->
+		<section id="banner">
+			<div class="banner_wrap">
+				<a href="#" class="a1"><span id="bannerL"></span></a>
+				<div class="banner_left">
+					<img src="img/banner.gif" />
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="banner_right">
+					<img src="img/banner_right.gif" />
+					<div><a href="#"><span id="xiazai"></span>下载客户端</a></div>
+					<p>PC&nbsp;安卓&nbsp;iPhone&nbsp;WP&nbsp;iPad Mac&nbsp;六大客户端</p>
+				</div>
+			</div>
+			<a href="#" class="a2"><span  id="bannerR"></span></a>
+		</section>
+		<!-- 内容开始 -->
+		<section id="content">
+			<div class="content_wrap">
+				<section id="left">
+					<section id="left1">
+						<header class="left_header clearFix">
+							<h2>
+						<a href="#">热门推荐</a>
+						<span class="red"></span>
+					</h2>
+							<nav>
+								<a href="#">华语</a>|<a href="#">流行</a>|<a href="#">摇滚</a>|<a href="#">民谣</a>|<a href="#">电子</a>
+							</nav>
+							<span class="more"><a href="#">更多</a><span class="jiantou"></span></span>
+						</header>
+						<ul class="clearFix">
+							<li>
+								<div class="img">
+									<a href="#">
+										<img src="img/left1.gif" />
+										<span class="headset"></span>
+										<span class="mask"></span>
+										<span class="text">11万</span>
+										<a href="#" class="play"></a>
+									</a>
+								</div>
+								<strong>
+							<a href="#">♬ 每个人的心里,都住着一个熊孩纸(民谣)</a>
+						</strong>
+							</li>
+							<li>
+								<div class="img">
+									<a href="#">
+										<img src="img/left1.gif" />
+										<span class="headset"></span>
+										<span class="mask"></span>
+										<span class="text">11万</span>
+										<a href="#" class="play"></a>
+									</a>
+								</div>
+								<strong>
+							<a href="#">♬ 每个人的心里,都住着一个熊孩纸(民谣)</a>
+						</strong>
+							</li>
+							<li>
+								<div class="img">
+									<a href="#">
+										<img src="img/left1.gif" />
+										<span class="headset"></span>
+										<span class="mask"></span>
+										<span class="text">11万</span>
+										<a href="#" class="play"></a>
+									</a>
+								</div>
+								<strong>
+							<a href="#">♬ 每个人的心里,都住着一个熊孩纸(民谣)</a>
+						</strong>
+							</li>
+							<li>
+								<div class="img">
+									<a href="#">
+										<img src="img/left1.gif" />
+										<span class="headset"></span>
+										<span class="mask"></span>
+										<span class="text">11万</span>
+										<a href="#" class="play"></a>
+									</a>
+								</div>
+								<strong>
+							<a href="#" class="jiemu">每个人的心里,都住着一个熊孩纸(民谣)
+							<span class="diantai"></span></a>
+						</strong>
+							</li>
+							<li>
+								<div class="img">
+									<a href="#">
+										<img src="img/left1.gif" />
+										<span class="headset"></span>
+										<span class="mask"></span>
+										<span class="text">11万</span>
+										<a href="#" class="play"></a>
+									</a>
+								</div>
+								<strong>
+							<a href="#">♬ 每个人的心里,都住着一个熊孩纸(民谣)</a>
+						</strong>
+							</li>
+							<li>
+								<div class="img">
+									<a href="#">
+										<img src="img/left1.gif" />
+										<span class="headset"></span>
+										<span class="mask"></span>
+										<span class="text">11万</span>
+										<a href="#" class="play"></a>
+									</a>
+								</div>
+								<strong>
+							<a href="#" class="jiemu">探戈，孤独者的三分钟爱情
+							<span class="diantai"></span></a>
+						</strong>
+							</li>
+							<li>
+								<div class="img">
+									<a href="#">
+										<img src="img/left1.gif" />
+										<span class="headset"></span>
+										<span class="mask"></span>
+										<span class="text">11万</span>
+										<a href="#" class="play"></a>
+									</a>
+								</div>
+								<strong>
+							<a href="#">♬ 每个人的心里,都住着一个熊孩纸(民谣)</a>
+						</strong>
+							</li>
+							<li>
+								<div class="img">
+									<a href="#">
+										<img src="img/left1.gif" />
+										<span class="headset"></span>
+										<span class="mask"></span>
+										<span class="text">11万</span>
+										<a href="#" class="play"></a>
+									</a>
+								</div>
+								<strong>
+							<a href="#" class="jiemu">每个人的心里,都住着一个熊孩纸(民谣)
+							<span class="diantai"></span></a>
+						</strong>
+							</li>
+						</ul>
+					</section>
+					<section id="left2">
+						<header class="left_header">
+							<h2>
+						<a href="#">新碟上架</a>
+						<span class="red"></span>
+					</h2>
+							<span class="more"><a href="#">更多</a><span class="jiantou"></span></span>
+						</header>
+						<div class="ul_wrap">
+							<ul class="clearFix">
+								<li>
+									<a href="#"><img src="img/left2.gif" /></a>
+									<strong><a href="#">天冷就回来2016</a></strong>
+									<p><a href="#">陈洁仪</a></p>
+									<span class="CD"></span>
+								</li>
+								<li>
+									<a href="#"><img src="img/left2.gif" /></a>
+									<strong><a href="#">天冷就回来2016</a></strong>
+									<p><a href="#">陈洁仪</a></p>
+									<span class="CD"></span>
+								</li>
+								<li>
+									<a href="#"><img src="img/left2.gif" /></a>
+									<strong><a href="#">天冷就回来2016</a></strong>
+									<p><a href="#">陈洁仪</a></p>
+									<span class="CD"></span>
+								</li>
+								<li>
+									<a href="#"><img src="img/left2.gif" /></a>
+									<strong><a href="#">天冷就回来2016</a></strong>
+									<p><a href="#">陈洁仪</a></p>
+									<span class="CD"></span>
+								</li>
+								<li>
+									<a href="#"><img src="img/left2.gif" /></a>
+									<strong><a href="#">天冷就回来2016</a></strong>
+									<p><a href="#">陈洁仪</a></p>
+									<span class="CD"></span>
+								</li>
+							</ul>
+							<span id="left2L"></span>
+							<span id="left2R"></span>
+						</div>
+					</section>
+					<section id="left3">
+						<header class="left_header">
+							<h2>
+						<a href="#">榜单</a>
+						<span class="red"></span>
+					</h2>
+							<span class="more"><a href="#">更多</a><span class="jiantou"></span></span>
+						</header>
+						<ul class="clearFix">
+							<li class="li_wrap">
+								<div class="clearFix">
+									<img src="img/left3.gif" />
+									<h3>
+								<a href="#" class="play1"><span></span></a>
+								<a href="#" class="collect1"><span></span></a>
+								<a href="#">云音乐飙升榜</a>
+							</h3>
+								</div>
+								<ol>
+									<li class="li_color ol_li">
+										<span class="span_color">1</span><a href="#">张士超你到底把我家钥匙放在哪里了</a>
+										<a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span class="span_color">2</span><a href="#">Brother</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span class="span_color">3</span><a href="#">霓虹深处</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>4</span><a href="#">借我</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span>5</span><a href="#">好多多的云</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>6</span><a href="#">如果也许</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span>7</span><a href="#">手上的麻绳</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>8</span><a href="#">最近的远方</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span>9</span><a href="#">我们拥抱亲吻相爱的人</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>10</span><a href="#">双生光</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color  ol_li ol_liLast clearFix">
+										<a href="#" class="all">查看全部&gt;</a>
+										<div class="spanLast"></div>
+									</li>
+								</ol>
+							</li>
+							<li class="li_wrap" id="li_1px">
+								<div class="clearFix">
+									<img src="img/left3.gif" />
+									<h3>
+								<a href="#" class="play1"><span></span></a>
+								<a href="#" class="collect1"><span></span></a>
+								<a href="#">云音乐飙升榜</a>
+							</h3>
+								</div>
+								<ol>
+									<li class="li_color ol_li">
+										<span class="span_color">1</span><a href="#">修炼爱情</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span class="span_color">2</span><a href="#">失落沙洲</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span class="span_color">3</span><a href="#">너와 나의 시간은</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>4</span><a href="#">从开始到现在</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span>5</span><a href="#">那个人</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>6</span><a href="#">张士超你到底把我家钥匙放在哪里了</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span>7</span><a href="#">好想你</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>8</span><a href="#">人质</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span>9</span><a href="#">너는 나 나는 너</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>10</span><a href="#">爱之初体验</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color  ol_li ol_liLast clearFix">
+										<a href="#" class="all">查看全部&gt;</a>
+										<div class="spanLast"></div>
+									</li>
+								</ol>
+							</li>
+							<li class="li_wrap" id="li_right">
+								<div class="clearFix">
+									<img src="img/left3.gif" />
+									<h3>
+								<a href="#" class="play1"><span></span></a>
+								<a href="#" class="collect1"><span></span></a>
+								<a href="#">云音乐飙升榜</a>
+							</h3>
+								</div>
+								<ol>
+									<li class="li_color ol_li">
+										<span class="span_color">1</span><a href="#">어린왕자 (The Little Prince)</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span class="span_color">2</span><a href="#">爱若</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span class="span_color">3</span><a href="#">咱们屯里人(粤语版)</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>4</span><a href="#">Like a Star</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span>5</span><a href="#">그대 (Hello)</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>6</span><a href="#">Foxy Girl</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span>7</span><a href="#">野子 - Live</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>8</span><a href="#">사이다</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color ol_li">
+										<span>9</span><a href="#">어쩌면 좋아</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="ol_li">
+										<span>10</span><a href="#">悟空</a><a href="#" class="one"></a><a href="#" class="two"></a><a href="#" class="three"></a>
+									</li>
+									<li class="li_color  ol_li ol_liLast clearFix">
+										<a href="#" class="all">查看全部&gt;</a>
+										<div class="spanLast"></div>
+									</li>
+								</ol>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section id="right">
+					<div id="right1_wrap">
+						<div id="right1">
+							<p>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+							<a href="#">用户登陆</a>
+						</div>
+					</div>
+					<ul id="right2">
+						<li>
+							<header class="headerR clearFix">
+								<h3>入驻歌手</h3>
+								<a href="#">查看全部<span class="check"></span></a>
+							</header>
+							<ul id="ul1">
+								<li class="clearFix">
+									<img src="img/right2.gif" />
+									<a href="#">
+										<strong>张惠妹aMEI</strong>
+										<p>台湾歌手张惠妹</p>
+									</a>
+								</li>
+								<li class="clearFix">
+									<img src="img/right2.gif" />
+									<a href="#">
+										<strong>张惠妹aMEI</strong>
+										<p>台湾歌手张惠妹</p>
+									</a>
+								</li>
+								<li class="clearFix">
+									<img src="img/right2.gif" />
+									<a href="#">
+										<strong>张惠妹aMEI</strong>
+										<p>台湾歌手张惠妹</p>
+									</a>
+								</li>
+								<li class="clearFix">
+									<img src="img/right2.gif" />
+									<a href="#">
+										<strong>张惠妹aMEI</strong>
+										<p>台湾歌手张惠妹</p>
+									</a>
+								</li>
+								<li class="clearFix">
+									<img src="img/right2.gif" />
+									<a href="#">
+										<strong>张惠妹aMEI</strong>
+										<p>台湾歌手张惠妹</p>
+									</a>
+								</li>
+							</ul>
+							<a href="#" id="buttom">申请成为网易音乐人</a>
+						</li>
+						<li>
+							<header class="headerR clearFix">
+								<h3>热门DJ</h3>
+							</header>
+							<ul id="ul2">
+								<li class="clearFix">
+									<a href="#"><img src="img/right3.gif" /></a>
+									<div>
+										<strong><a href="#">灵伟</a></strong>
+										<p>电台DJ资、深乐评人。</p>
+										<span class="V"></span>
+									</div>
+								</li>
+								<li class="clearFix">
+									<a href="#"><img src="img/right3.gif" /></a>
+									<div>
+										<strong><a href="#">灵伟</a></strong>
+										<p>电台DJ资、深乐评人。</p>
+										<span class="V"></span>
+									</div>
+								</li>
+								<li class="clearFix">
+									<a href="#"><img src="img/right3.gif" /></a>
+									<div>
+										<strong><a href="#">灵伟</a></strong>
+										<p>电台DJ资、深乐评人。</p>
+										<span class="V"></span>
+									</div>
+								</li>
+								<li class="clearFix">
+									<a href="#"><img src="img/right3.gif" /></a>
+									<div>
+										<strong><a href="#">灵伟</a></strong>
+										<p>电台DJ资、深乐评人。</p>
+										<span class="V"></span>
+									</div>
+								</li>
+								<li class="clearFix">
+									<a href="#"><img src="img/right3.gif" /></a>
+									<div>
+										<strong><a href="#">灵伟</a></strong>
+										<p>电台DJ资、深乐评人。</p>
+										<span class="V"></span>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</section>
+		<!-- 底部开始 -->
+		<footer>
+			<div id="footer_wrap">
+				<div id="footerL">
+					<a href="#">
+						<span id="foot"></span>
+						<h4>独立音乐人招募计划</h4>
+						<p>加入我们 即将与超过亿万乐迷互动</p>
+					</a>
+				</div>
+				<div id="footerC">
+					<nav><a href="#">关于网易</a>-<a href="#">客户服务</a>-<a href="#">服务条款</a>-<a href="#">网站导航</a>&nbsp;&nbsp;网易公司版权所有©1997-2016</nav>
+					<p>网络文化经营许可证:<a href="#">浙网文[2013]0332-034号</a></p>
+				</div>
+				<div id="footerR">
+					<span id="opinion"></span>
+					<a href="#">意见反馈</a>
+				</div>
+		</footer>
+	</body>
+
+</html>
