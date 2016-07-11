@@ -1,29 +1,933 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title></title>
-</head>
-<style type="text/css">
-div{
-	width:10px;
-	height: 10px;
-	background: pink;
-	position: absolute;
-}
-</style>
-<body>
-<script type="text/javascript">
-	var divs = document.getElementsByTagName('div');
-	document.onmousemove = function(ev){
-		var div = document.createElement('div');
-		div.style.left = ev.pageX + 'px';
-		div.style.top = ev.pageY + 'px';
-		if(divs.length >= 10){
-			document.body.removeChild(divs[0]);
-		}
-		document.body.appendChild(div);
-	}
-</script>
-</body>
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    		<head>
+    			<meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+    			<meta content="乔布堂 cv.qiaobutang.com" name="keywords"/>
+    			<title>前端_正经版</title>
+    			<style type="text/css">
+    				div, table, td, pre, input {
+    					margin: 0;
+    					padding: 0;
+    				}
+    				pre, textarea {
+    					white-space: pre-wrap;
+    					white-space: -moz-pre-wrap;
+    					white-space: -pre-wrap;
+    					white-space: -o-pre-wrap;
+    					word-wrap: break-word;
+    				}
+    				.border_box {
+						box-sizing: border-box;
+						-ms-box-sizing: border-box;
+						-moz-box-sizing: border-box;
+						-webkit-box-sizing: border-box;
+					}
+    				.row_layout .resume {
+    					margin: 0 auto;
+    				}
+    				.row_layout .resume .photo_table {
+    					border-collapse: separate;
+    					border-spacing: 0;
+    					table-layout: fixed;
+    					width: 100%;
+    				}
+    				.row_layout .resume .photo_table td {
+    					text-align: left;
+    					vertical-align: top;
+    				}
+    				.row_layout .resume .photo_table td img {
+    					border: 0;
+    					display: block;
+    				}
+    			</style>
+    			<style type="text/css">
+			.SimSun { font-family: SimSun, 宋体, 华文宋体; }
+                    .SimHei { font-family: SimHei, 黑体, Hei, 华文细黑, 华文黑体; }
+                    .SimKai { font-family: SimKai, 楷体, 楷体_GB2312, Kai, 华文楷体; }
+                    .SimFang { font-family: SimFang, 仿宋, 仿宋_GB2312, 华文仿宋; }
+                    .Arial { font-family: Arial; }
+                    .Times { font-family: Times New Roman; }
+                    .Tahoma { font-family: Tahoma; }
+                    .Verdana { font-family: Verdana; }
+                    
+		</style>
+    			<style type="text/css">
+    		.row_layout .resume {
+				border: 1px solid #ccc;
+				
+				-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+				-moz-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+				box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+			}
+
+    		.row_layout .resume .section,
+    		.row_layout .resume .row {
+    			position: relative;
+    		}
+    		.row_layout .resume .row table {
+				border-collapse: separate;
+				border-spacing: 0;
+				table-layout: fixed;
+				width: 100%;
+			}
+    		.row_layout .resume .row .cell pre {
+    			display: block;
+    			position: relative;
+    			line-height: 0;
+    			font-size: 0;
+    		}
+    		@-moz-document url-prefix() {
+				.row_layout .resume .row table {
+					table-layout: auto;
+				}
+				.row_layout .resume .row table td {
+					max-width: 0;
+				}
+			}
+    	</style>
+    		</head>
+    		<body>
+    			<div class="row_layout">
+    				<div class="resume" style="width: 210.0mm;">
+    					<div class="inner_resume" style="margin: 20.0mm 18.0mm 20.0mm 18.0mm;">
+    					
+    					<div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 45.7332%; background-color: transparent; text-align: left; vertical-align: bottom; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="name"/>
+            <pre style="min-height: 22pt; margin: 1.0mm 1.5mm 0.0mm 1.5mm;"><span class="SimSun" style="font-size: 22pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">马楠</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: right; vertical-align: bottom; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="intent"/>
+            <pre style="min-height: 11pt; margin: 1.0mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 11pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">应聘岗位：Web前端开发</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="social_network_account"/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 0.5mm 0.0mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">sex：女  |   age：23</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="phone"/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 0.5mm 0.0mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">186-2412-4849</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="email"/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 0.5mm 0.0mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">manan21@outlook.com</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="social_network_account"/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 0.5mm 0.0mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">github：https://github.com/nnma</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="social_network_account"/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 0.5mm 0.0mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">期望薪资：11k</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="social_network_account"/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 0.5mm 0.0mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt solid #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="title"/>
+            <pre style="min-height: 12pt; margin: 2.0mm 1.5mm 0.5mm 1.5mm;"><span class="Arial" style="font-size: 12pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">核心技能</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 1pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="SimSun" style="font-size: 1pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 13.5464%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td><td class="cell border_box" style="width: 3.65297%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"> •</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="content"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">熟练使用PhotoShop,Sublime text,Hbuilder等工具进行前端页面的开发。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 13.5464%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td><td class="cell border_box" style="width: 3.65297%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"> •</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="content"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">熟练运用HTML + CSS，能够兼容主流各种浏览器，熟悉W3C标准与Web 语义化。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 13.5464%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td><td class="cell border_box" style="width: 3.65297%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"> •</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="content"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">能够运用JQ框架、能快速配合UI设计和后台完成项目负责的部分。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 13.5464%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td><td class="cell border_box" style="width: 3.65297%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"> •</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="content"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">了解HTML5，CSS3的标签及特性，正在学习移动WEB。学习能力强，善于利用知乎、搜过引擎、书籍等各种途径独立解决问题。 </span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 13.5464%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td><td class="cell border_box" style="width: 3.65297%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"> •</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="content"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">能够运用DOM,BOM、通过AJAX、JSONP与后端进行数据交互。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 13.5464%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td><td class="cell border_box" style="width: 3.65297%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"> •</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="content"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">了解Bootstrap框架并用于响应式开发。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt solid #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="title"/>
+            <pre style="min-height: 12pt; margin: 2.0mm 1.5mm 0.5mm 1.5mm;"><span class="Arial" style="font-size: 12pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">项目经验</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 1pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="SimSun" style="font-size: 1pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.0;">云朵工厂首页</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">测试地址：https://nnma.github.io/cloudfactory/</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">开发环境：Hbuilder；</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">运用技术：JavaScript、jQuery、CSS3   CSS、Html</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">项目描述:  </span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.137%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">1.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">本项目完美还原了设计图，并实现交互功能。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.137%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">2.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">鼠标滚轮滚屏：针对鼠标上下滚轮对火狐和谷歌进行兼容，判断num的值并与风扇导航实现交互运动，点击风扇导航时回到对应页面并播放该页面的效果。难点：在进行鼠标滚轮时，控制页面向上滑动一屏执行结束之后在执行下一次滚动；解决方法：加定时器，定义一个开关来做判断。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 29.9848%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">3.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">云朵及风扇导航漂浮飞行：根据设计图，让云朵或风扇在指定区域内，在定位父级的定位距离的基础上加上随机生成的固定区域内的值，从而让云朵进行不同元素的每次不同移动。难点：控制随机数的范围。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 29.9848%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">4.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">电线的遮罩运动：当点击页面的工厂概况和仓库导航时，实现电线的渐现的遮罩效果，并且让每一项之间自由切换。难点：点击下一项时，上一项的内容还没有完全遮罩，下一组内容的遮罩就开始播放。解决方法：在遮罩开始走出的函数末尾加入回调函数，让每次点击时上一组完全消失后在开始下一组。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.2892%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">5.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">盒子的回弹效果：当鼠标滚轮滚到该页面上时，通过改变元素的height，改变其位置，利用mTween实现指定盒子的回弹动画，模仿重物掉下的效果。难点：当盒子掉下完成回弹后，淡入该产品的相关信息时，无法指定当前的盒子信息。解决方法：给每一项加索引值，判断当前的索引值。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 14.9163%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.0;">NTW（响应式）</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">测试地址：https://nnma.github.io/NTW/</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">开发环境：Hbuilder；</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">运用技术：JavaScript、jQuery、CSS3 、Bootstrap框架</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">项目描述：</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.137%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">1.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">响应式的制作是目前前端必备的技能之一，该项目为不同终端的用户提供更加舒适的界面和更好的用户体验</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.4414%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">2.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">通过媒体查询使该项目在不用分辨率的设备下都能显示一种特定的结构。此项目中应用了html5标签、css3一些新样式，如section、header以及transtion动画和结构选择器、属性选择器</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.4414%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">3.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">难点：适配不同分辨率电脑屏幕，和手机，ipad解决方法：用了媒体查询，由小到大写了多套样式</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 1pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="SimSun" style="font-size: 1pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.0;">网易云音乐首页</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">测试地址：https://nnma.github.io/music/</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">开发环境：Hbuilder；</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">运用技术： Html、CSS </span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.6347%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">项目描述：</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 29.9848%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">1.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">项目采用了css+html布局，并使用了部分html5的新标签，引入js解决了html5标签在IE6下无法显示的问题。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.4414%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">2.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">此项目能兼容到IE6以及其他各种主流浏览器，其中头部以及其他位置的固定定位在ie低版本下不支持的问题，在样式中用css行为能很好地解决。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.4414%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">3.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">项目中大多数的图标采用css精灵，减少了http请求次数，减小了图片的占位大小以及方便命名。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.4414%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">4.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">为了seo搜索方便，结构层数在实现页面的基础上尽量最小化。该项目的制作是一个很好的练手，是对css+html基础的综合应用。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.4414%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">5.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">难点：对chrome，firfox，safari，欧朋。这些有独立内核的浏览器进行兼容支持，兼容ie6时出现了双边距bug,表单控件默认border会显示解决方法：display-inline清除双边距问题，表单控件用border：0清除默认样式。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.137%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.137%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.9391%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.0;">移动端---仿当当</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">测试地址：https://nnma.github.io/dangdang/</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.4825%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">开发环境：Hbuilder；</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.4825%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">运用技术：JavaScript、Html、CSS</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.4825%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">项目描述：</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 29.9848%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">1.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">移动端的的制作是前端的必备技能之一，在移动端中摒弃了PC端的设置固定宽高的方法，采用rem这新的计量单位使其适配不同的移动端。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.137%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">2.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">通过在meta中设置minimum-scale和maximum-scale 以及禁止缩放来解决用户缩放使页面错乱的问题。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.137%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">3.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">该项目运用了css3中部分知识如结构选择器和属性选择器，更方便的给结构加样式，并不需要起多个class名。怪异盒模型和百分比的搭配使用使代码更简化。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.137%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">4.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">适配安卓苹果ipad等不同尺寸机型，一张图给它一个单位，能在不同的尺寸机型下显示大小不同。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 30.137%; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">5.</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.0;">项目中16不是一个固定值，rem是根据html下最小字体来的，所以根据测试机型的屏幕宽度，除以16的一个比值，在用在设计图上量出的px值除以这个比值，就能转化成rem，实现不同机型屏幕的适配。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt solid #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="title"/>
+            <pre style="min-height: 12pt; margin: 2.0mm 1.5mm 0.5mm 1.5mm;"><span class="Arial" style="font-size: 12pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">工作经历</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 1pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="SimSun" style="font-size: 1pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 19.7869%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="period"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Arial" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">2015.04</span></pre>
+        </td><td class="cell border_box" style="width: 43.2268%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="title"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">沈阳卓越信息技术有限公司</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="subtitle"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">实习</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 20.0%; background-color: transparent; text-align: center; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td><td class="cell border_box" style="width: 3.65297%; background-color: transparent; text-align: center; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="bullet"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Arial" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">•</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="content"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 0.0mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">根据psd图，还原设计稿</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 20.0%; background-color: transparent; text-align: center; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td><td class="cell border_box" style="width: 3.8%; background-color: transparent; text-align: center; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="bullet"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Arial" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">•</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="content"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 0.0mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">配合进行页面代码的调试、bug修复、浏览器兼容问题</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 20.0%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 1.0mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="title"/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 1.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt solid #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="title"/>
+            <pre style="min-height: 12pt; margin: 2.0mm 1.5mm 0.5mm 1.5mm;"><span class="Arial" style="font-size: 12pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">教育经历</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 1pt; margin: 1.5mm 1.5mm 0.0mm 1.5mm;"><span class="SimSun" style="font-size: 1pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.0;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 20.0%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="period"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Arial" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">2013.09-2016.06</span></pre>
+        </td><td class="cell border_box" style="width: 36.0%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="college"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">辽宁经济职业技术学院</span></pre>
+        </td><td class="cell border_box" style="width: 27.8116%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="major"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">电子商务</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: right; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="degree"/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">专科</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 0.75mm 1.5mm 0.75mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 20.0%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 1.0mm 1.5mm;"><span class="Arial" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">2015.12-2016.6</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="content"/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 1.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;">妙味课堂</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div><div class="row" style="padding-top:0.0mm; padding-bottom:0.0mm;">
+						<table>
+							<tr>
+								<td class="cell border_box" style="width: 20.0%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 1.0mm 1.5mm;"><span class="SimSun" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; text-decoration: none; line-height: 1.15;"></span></pre>
+        </td><td class="cell border_box" style="width: 3.65297%; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value=""/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 1.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;"> •</span></pre>
+        </td><td class="cell border_box" style="width: auto; background-color: transparent; text-align: left; vertical-align: top; border-top: 0.75pt none #000000; border-right: 0.75pt none #000000; border-bottom: 0.75pt none #000000; border-left: 0.75pt none #000000;">
+            <input type="hidden" name="key" value="content"/>
+            <pre style="min-height: 10.5pt; margin: 1.0mm 1.5mm 1.0mm 1.5mm;"><span class="Tahoma" style="font-size: 10.5pt; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; line-height: 1.15;">通过培训，已掌握web前端开发技术。熟悉html.css.等页面制作技术，了解html、css3的基础用法。熟悉掌握w3c标准静态网页的制作。熟悉js、jqurey的用法并能熟练的使用面向对象、ajax。能熟练使用ps 、Sublime、firefox  BUG调试器、template引擎工具。</span></pre>
+        </td>
+							</tr>
+						</table>
+					</div>
+    					</div>
+    				</div>
+    			</div>
+    		</body>
+    	</html>
