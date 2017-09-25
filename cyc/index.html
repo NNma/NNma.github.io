@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <title>三观测试</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/m.touch.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="js/shipei.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<style>
+    @-webkit-keyframes icon {
+        0%{
+            -webkit-transform: translateY(0);
+            opacity: 1;
+        }
+        50% {
+            -webkit-transform: translateY(1rem);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: translateY(1rem);
+            opacity: 0;
+        }
+    }
+    @keyframes icon {
+        0%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        50% {
+            transform: translateY(1rem);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(1rem);
+            opacity: 0;
+        }
+    }
+    html,body{position: relative;margin: 0;height: 100%;overflow: hidden;}
+    ul {margin: 0;padding: 0;list-style: none;}
+    .page,.start,.result {position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-size: cover !important;}
+    div.page {-webkit-transform: translateY(-100%);transform:  translateY(-100%);}
+    div.page:nth-of-type(1) {background: url(img/page-1.jpg) no-repeat;}
+    div.page:nth-of-type(2) {background: url(img/page-2.jpg) no-repeat;}
+    div.page:nth-of-type(3) {background: url(img/page-3.jpg) no-repeat;}
+    div.page:nth-of-type(4) {background: url(img/page-4.jpg) no-repeat;}
+    .start { background: url(img/start.jpg) no-repeat;z-index: 2; transition: 0.6s;}
+    .result { background: url(img/result.jpg) no-repeat;z-index: -1; }
+    .ico {position: absolute;left: 48%;bottom: 16px;width: 0.2rem;height: 0.18rem;background: url(img/next.png) no-repeat;background-size: cover;animation: icon 2s infinite linear;}
+    div.pageActive{-webkit-transform: translateY(0);transform: translateY(0);}
+    div.pageNext{-webkit-transform: translateY(100%);transform:  translateY(100%);}
+    .page_wrap{position: absolute;top: 0;left: 0;z-index: 1;overflow: hidden;transition: 1s;}
+</style>
+
+<body>
+<div class="start">
+
+</div>
+<div class="page_wrap">
+    <div class="page" id="page1">
+        <span class="ico"></span>
+    </div>
+    <div class="page" id="page2">
+        <span class="ico"></span>
+    </div>
+    <div class="page" id="page3">
+        <span class="ico"></span>
+    </div>
+</div>
+<div class="result">
+
+</div>
+
+
+<script>
+    window.onload = function(){
+        var bodyH = $(document).height();
+        var bodyW = $(document).width();
+        var li = document.querySelectorAll("li.page");
+
+        var now = 0;
+        $('.page_wrap').css({
+            'height': bodyH,
+            'width':bodyW
+        })
+        $('.start').click(function(){
+            $('.start').css({'top': -bodyH})
+        })
+        for(var i = now+1 ; i < $('div.page').length; i++){
+            $('div.page').eq(i).removeClass('pageActive').addClass('pageNext');
+            $('div.page').eq(now).removeClass('pageNext').addClass('pageActive');
+        }
+        MTouch(".page").swipeUp(//向上滑动
+            function(){
+                var next = now + 1;
+                if(now==2){
+                    $('.page_wrap').css({'top':-bodyH})
+                    $('.result').css({'zIndex': 0})
+                }
+                $('div.page').eq(next).css({'transition': '0s'})
+                $('div.page').eq(next).removeClass('pageActive').addClass('pageNext');
+                setTimeout(
+                    function(){
+//							console.log(now)
+//							console.log(next)
+                        $('div.page').eq(next).css({'transition': '0.6s'})
+                        $('div.page').eq(next).removeClass('pageNext').addClass('pageActive');
+                        $('div.page').eq(now).css({'transition': '0.6s'})
+                        $('div.page').eq(now).removeClass('pageActive').removeClass('pageNext');
+                        now = next;
+                    },30
+                );
+            }
+        );
+        $('.result').click(function(){
+            window.location.reload();//刷新当前页面.
+            $('.result').css({'zIndex': -1})
+        });
+        for(var i = 0; i < li.length; i++){
+            css(li[i],"translateX",i*bodyW);
+        };
+    };
+</script>
+
+</body>
+
+</html>
